@@ -1,0 +1,606 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+
+/* Contenedor principal del logo */
+.logo {
+  display: flex;        /* Alinea la imagen y el texto horizontalmente */
+  align-items: center;  /* Centra la imagen y el texto verticalmente */
+}
+
+/* Estilos para la imagen del logo */
+.logo-image {
+  height: 50px;         /* Ajusta la altura del logo */
+  margin-right: 15px;   /* Espacio entre el logo y el texto */
+}
+
+/* Estilos para el texto al lado del logo */
+.logo-text {
+  font-family: 'Cormorant Garamond', serif; /* Fuente elegante como en el diseño */
+  font-weight: 700;     /* Texto en negrita */
+  line-height: 1.1;     /* Espacio entre las líneas de texto */
+  font-size: 20px;      /* Tamaño del texto */
+  color: #ffffff;       /* Color del texto (blanco) */
+}
+
+/* Hace que "IMPERIAL" y "GRAND HOTEL" se apilen uno sobre otro */
+.logo-text span {
+  display: block;
+}
+
+/* ======================= CONFIGURACIÓN GLOBAL Y FUENTES ======================= */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Lato', sans-serif;
+  --color-gold: #c09a6b;
+  --color-dark: #1f1f1f;
+  --color-text-light: #e0e0e0;
+  --color-text-dark: #333;
+  --color-text-muted: #888;
+  --color-bg-light: #ffffff;
+  --color-bg-grey: #f8f8f8;
+  --image-gradient: linear-gradient(rgba(100,100,100,0.3), rgba(150,150,150,0.5));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.arrow-span {
+  font-family: serif;
+  font-weight: bold;
+}
+
+/* ======================= SECCIÓN 1: HERO & HEADER ======================= */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-color: #333; /* Fallback */
+  background-image: var(--image-gradient);
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-svg {
+    margin-right: 15px;
+}
+
+.logo-svg path {
+    stroke-linecap: round;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 20px;
+  color: #fff;
+}
+
+.logo-text span {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 14px;
+  font-weight: 400;
+}
+.nav-links li { position: relative; }
+.nav-links a { color: #fff; }
+.nav-links a span { font-size: 10px; }
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background-color: #fff;
+  color: var(--color-dark);
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+.nav-links li:hover .dropdown { display: block; }
+.dropdown li { margin-bottom: 0.5rem; }
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin: auto;
+}
+
+.hero-content .subtitle {
+  color: var(--color-gold);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+
+.discover-button {
+  display: inline-block;
+  border-bottom: 1px solid var(--color-gold);
+  color: #fff;
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  right: 3%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.slider-arrow {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 20;
+  background-color: var(--color-dark);
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  color: #fff;
+}
+
+.booking-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-field label {
+  font-size: 14px;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.booking-field input, .booking-field select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  color: #fff;
+  padding: 0.5rem 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  width: 200px;
+}
+.booking-field select { appearance: none; }
+.input-with-icon { position: relative; }
+.calendar-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+}
+
+.check-availability-btn {
+  background-color: var(--color-gold);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ======================= ESTILOS DE SECCIÓN GENERALES ======================= */
+section {
+  padding: 120px 10%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title .title-line {
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin: 0 auto 1.5rem auto;
+}
+.section-title .title-line.gold { background-color: var(--color-gold); }
+
+
+.section-title .subtitle {
+  color: var(--color-gold);
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.section-title h2 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+/* ======================= SECCIÓN 2: HABITACIONES ======================= */
+/* Importar una fuente similar de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400&display=swap');
+
+/* VARIABLES DE COLOR Y ESTILOS GLOBALES */
+:root {
+  --gold: #c09a6b;
+  --dark-bg: #222;
+  --text-light: #f0f0f0;
+  --text-dark: #333;
+  --bg-light: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, a {
+  transition: opacity 0.3s ease;
+}
+
+button:hover, a:hover {
+  opacity: 0.8;
+}
+
+
+
+
+/* ESTILOS DE SECCIÓN GENERALES */
+main section {
+  padding: 10rem 10%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title p {
+  color: var(--gold);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  color: var(--text-dark);
+}
+
+/* SECCIÓN DE HABITACIONES */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+}
+
+.room-card {
+  position: relative;
+  color: var(--text-light);
+}
+.room-card.large {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.room-image {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+.room-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+}
+
+
+/* ======================= SECCIÓN 3: AMENITIES ======================= */
+.amenities-section {
+  background-color: var(--color-bg-light);
+  padding-bottom: 60px;
+}
+.amenities-content {
+    max-width: 50%;
+    margin-bottom: 2rem;
+}
+.amenities-description {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.amenity-card {
+    background-color: var(--color-dark);
+    color: #fff;
+    padding: 3rem;
+}
+.amenity-placeholder-light {
+    background-color: #f0f0f0;
+}
+.amenity-card h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.amenity-card p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.amenity-card a {
+    color: var(--color-gold);
+    font-weight: 700;
+}
+
+
+/* ======================= SECCIÓN 4: CUSTOMER REVIEW ======================= */
+.testimonial-section {
+  position: relative;
+  background-color: #333;
+  background-image: var(--image-gradient);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+.testimonial-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+.testimonial-section > * { position: relative; z-index: 2; }
+
+.testimonial-box {
+    display: flex;
+    max-width: 850px;
+    margin: 0 auto 2rem auto;
+    background-color: var(--color-dark);
+    text-align: left;
+}
+.testimonial-image-placeholder {
+    width: 250px;
+    flex-shrink: 0;
+    background: #ccc;
+}
+.testimonial-text {
+    padding: 3rem;
+}
+.stars { color: var(--color-gold); font-size: 1.1rem; margin-bottom: 1rem; }
+.quote { font-style: italic; color: #ccc; line-height: 1.6; margin-bottom: 1.5rem; }
+.client-name { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 0.2rem; }
+.client-status { color: #aaa; font-size: 0.9rem; }
+
+.slider-dots { display: flex; justify-content: center; gap: 8px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; opacity: 0.5; }
+.dot.active { opacity: 1; }
+
+/* ======================= SECCIÓN 5: TEAM ======================= */
+.team-section { background-color: var(--color-bg-light); }
+.team-grid { display: flex; justify-content: center; gap: 30px; text-align: center; }
+.team-photo-placeholder {
+    width: 270px;
+    height: 340px;
+    background-color: #e9e9e9;
+    margin-bottom: 1.5rem;
+}
+.team-member h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+.team-member p { color: var(--color-text-muted); }
+
+/* ======================= SECCIÓN 6: FOOTER ======================= */
+.footer {
+    background-color: var(--color-dark);
+    color: #aaa;
+    padding: 100px 10% 30px 10%;
+}
+.footer .logo-text { color: #fff; }
+.footer .logo-svg path { stroke: #fff; }
+.footer .logo-svg path:nth-child(2) { stroke: var(--color-gold); }
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #333;
+}
+.footer-col.about p { line-height: 1.7; margin-top: 1.5rem; }
+.footer-col h4 {
+    color: #fff;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+.footer-col.links ul { padding: 0; }
+.footer-col.links li { margin-bottom: 0.7rem; }
+.footer-col.subscribe p { margin-bottom: 1.5rem; }
+
+.subscribe-form { display: flex; }
+.subscribe-form input {
+    flex-grow: 1;
+    background: transparent;
+    border: 1px solid #444;
+    padding: 0.8rem;
+    color: #fff;
+    border-right: none;
+}
+.subscribe-form button {
+    background-color: var(--color-gold);
+    border: none;
+    color: #fff;
+    padding: 0 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    font-size: 14px;
+}
+.social-icons { display: flex; gap: 1rem; }
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    transition: all 0.3s;
+}
+.social-icons a:hover {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #fff;
+}
+.footer-legal a { margin-left: 1.5rem; }
+

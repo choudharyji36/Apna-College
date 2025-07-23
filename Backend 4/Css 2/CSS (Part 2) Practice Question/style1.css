@@ -1,0 +1,46 @@
+                 /* Qs.1 */
+ #Face {
+    color: blue;
+} 
+                 /* Qs.2 */
+* {
+   text-align: center;    
+}
+                 /* Qs.3 */
+h1 {
+    font-family:Georgia;
+}
+                  /* Qs.4 */
+
+#Changebackgroundcolor{
+     color: white;
+    background-color: cornflowerblue;
+}
+                 /* Qs.5 */   
+button{
+    color: purple;
+    background-color: azure;
+}
+                  /* Qs.6 */
+button:hover {
+   background: yellow;
+   color: blue;
+}
+                    /* Qs.7 */
+
+p:nth-child(odd){
+      color: yellow;
+}
+
+                   /* Qs.8 */
+h1::first-letter {
+         color: red;
+}
+                   /* Qs.9 */
+
+ input[type="checkbox"]:checked + label{
+            color: red;
+ }
+
+                    /* Qs.10 */
+                  

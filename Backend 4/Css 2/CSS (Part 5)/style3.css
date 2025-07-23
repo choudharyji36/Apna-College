@@ -1,0 +1,13 @@
+#container{
+    /* flex-direction: row;
+    justify-content: flex-start; */
+    /* flex-wrap: nowrap; */
+     /* flex-wrap: wrap;   */
+    /* flex-wrap: wrap-reverse; */
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    /* flex-wrap: wrap;   */
+    flex-wrap: wrap-reverse;
+
+
+}

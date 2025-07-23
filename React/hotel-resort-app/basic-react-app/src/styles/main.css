@@ -1,0 +1,40 @@
+.page {
+  padding: 20px;
+}
+
+.hero-section {
+  background-color: #f0f0f0;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.add-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+}
+
+.add-form input {
+  margin: 5px;
+  padding: 8px;
+}
+
+.editable-text h1 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.editable-text button {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
