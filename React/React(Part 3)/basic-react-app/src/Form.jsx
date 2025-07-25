@@ -1,3 +1,4 @@
+                               // React (Part3) Event Object
 function handleFormSubmit (event) {
     event.preventDefault();
     console.log("form was submitted");
